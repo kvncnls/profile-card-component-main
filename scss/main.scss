@@ -20,16 +20,14 @@ $light-gray: hsl(0, 0%, 90%);
 html {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
+  height: 100%;
   overflow: hidden;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 100%;
   align-items: center;
+  justify-content: center;
   background-color: #19a1ad;
 }
 
@@ -55,9 +53,9 @@ li {
 .background-1 {
   top: 0;
   left: 0;
-  background-image: url(/images/bg-pattern-top.svg);
-  width: 100%;
   height: 100%;
+  width: 100%;
+  background-image: url(/images/bg-pattern-top.svg);
   transform: translateX(-50%) translateY(-50%);
   background-position: center;
   background-size: contain;
@@ -70,9 +68,9 @@ li {
 .background-2 {
   bottom: 0;
   right: 0;
-  background-image: url(/images/bg-pattern-bottom.svg);
-  width: 100%;
   height: 100%;
+  width: 100%;
+  background-image: url(/images/bg-pattern-bottom.svg);
   transform: translateX(50%) translateY(50%);
   background-position: center;
   background-size: contain;
@@ -83,10 +81,11 @@ li {
 }
 
 .card {
-  margin-top: auto;
-  width: 100%;
   min-width: 326px;
-  max-width: 350px;
+  @include _640 {
+    width: 100%;
+    max-width: 350px;
+  }
   height: 374px;
   border-radius: 12px;
   overflow: hidden;
