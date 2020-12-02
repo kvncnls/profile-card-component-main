@@ -100,7 +100,7 @@ li {
       width: auto;
       align-items: center;
       justify-content: center;
-      transform: translateY(60%);
+      transform: translateY(70%);
       z-index: 2;
       img {
         max-width: 100%;
@@ -146,6 +146,7 @@ li {
       justify-content: space-evenly;
       position: relative;
       margin-top: auto;
+      color: $dark-desaturated-blue;
       .stat {
         align-items: center;
         justify-content: center;
